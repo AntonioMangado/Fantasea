@@ -1,9 +1,9 @@
 // Variables globales
 require("dotenv").config();
+require('./config/db_mongo') 
 const express = require('express')
 const app = express()
 const port = 3000
-require('./config/db_mongo') 
 
 // Habilito recepción de JSON en servidor.
 app.use(express.json())
