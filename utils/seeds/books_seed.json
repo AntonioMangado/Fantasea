@@ -7,5 +7,77 @@
         "description": "Don Quixote, or The Ingenius Gentleman Don Quixote of La Mancha, written by Miguel de Cervantes Saavedra, is a novel about a man with questionable sanity who goes on a series of quests to become a knight, accompanied by his 'squire', Sancho.",
         "year": 1605,
         "image":"https://m.media-amazon.com/images/I/41RrI0dPBBL.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Harry Potter and the Philosopher's Stone",
+        "author": "J.K. Rowling",
+        "release_year": 1997,
+        "genre": "Fantasy",
+        "description": "Enter the magical world of Hogwarts with J.K. Rowling's 'Harry Potter and the Philosopher's Stone.' Follow the journey of the orphaned Harry Potter as he discovers his true heritage as a wizard and joins his new friends Ron Weasley and Hermione Granger. As they navigate the challenges of school life and uncover the mysteries surrounding the Sorcerer's Stone, Harry's destiny becomes intertwined with the dark wizard Voldemort. This enchanting tale introduces readers to a world of spells, magical creatures, and the enduring power of friendship.",
+        "cover_link": "search?q=harry+potter+and+the+philosopher%27s+stone+book+cover"
+    },
+    {
+        "id": 3,
+        "title": "The Name of the Wind",
+        "author": "Patrick Rothfuss",
+        "release_year": 2007,
+        "genre": "Epic Fantasy",
+        "description": "Patrick Rothfuss weaves a mesmerizing tale in 'The Name of the Wind.' The story unfolds as Kvothe, a gifted and enigmatic young man, recounts his life's journey from a traveling troupe to the prestigious University. Gifted with magical abilities, Kvothe faces love, loss, and the pursuit of knowledge. The novel explores the complexities of storytelling, the magic that lies within words, and the mysteries that shape Kvothe's destiny in a world filled with music, magic, and ancient legends.",
+        "cover_link": "search?q=the+name+of+the+wind+book+cover"
+    },
+    {
+        "id": 4,
+        "title": "Mistborn: The Final Empire",
+        "author": "Brandon Sanderson",
+        "release_year": 2006,
+        "genre": "High Fantasy",
+        "description": "Brandon Sanderson introduces readers to a world dominated by the immortal Lord Ruler in 'Mistborn: The Final Empire.' In a society divided between the privileged nobility and oppressed skaa, Vin, a street thief, discovers her extraordinary magical abilities. Joined by a group of rebels, Vin embarks on a daring mission to overthrow the Lord Ruler's tyranny. Sanderson's intricate magic system, compelling characters, and a plot filled with political intrigue make this a thrilling and thought-provoking fantasy epic.",
+        "cover_link": "search?q=mistborn+the+final+empire+book+cover"
+    },
+    {
+        "id": 5,
+        "title": "The Lies of Locke Lamora",
+        "author": "Scott Lynch",
+        "release_year": 2006,
+        "genre": "Fantasy",
+        "description": "Within the labyrinthine city of Camorr, Scott Lynch introduces readers to the charismatic and cunning Locke Lamora in 'The Lies of Locke Lamora.' Born into the criminal underworld, Locke and his band of fellow con artists, the Gentlemen Bastards, navigate the intricate web of crime and politics in this richly detailed world. As they weave their elaborate schemes, the Gentlemen Bastards become entangled in a dangerous game with a mysterious figure known as the Grey King. Filled with wit, intrigue, and unexpected twists, Lynch's novel takes readers on a roller-coaster ride through a city teeming with both danger and wonder.",
+        "cover_link": "search?q=the+lies+of+locke+lamora+book+cover"
+    },
+    {
+        "id": 6,
+        "title": "The Wheel of Time: The Eye of the World",
+        "author": "Robert Jordan",
+        "release_year": 1990,
+        "genre": "High Fantasy",
+        "description": "In the first installment of 'The Wheel of Time' series, 'The Eye of the World,' Robert Jordan introduces readers to a sprawling world on the brink of a cataclysmic conflict. As three young villagers are thrust into a journey of prophecy and destiny, they must confront dark forces and unravel the mysteries of the Wheel of Time. Jordan's epic series blends intricate world-building, diverse cultures, and a complex magic system that captivates readers across a sweeping narrative.",
+        "cover_link": "search?q=the+eye+of+the+world+book+cover"
+    },
+    {
+        "id": 7,
+        "title": "The Chronicles of Narnia: The Lion, the Witch and the Wardrobe",
+        "author": "C.S. Lewis",
+        "release_year": 1950,
+        "genre": "Fantasy",
+        "description": "Step through the wardrobe into the magical land of Narnia in C.S. Lewis's classic, 'The Lion, the Witch and the Wardrobe.' Four siblings—Peter, Susan, Edmund, and Lucy—discover a world under the rule of the White Witch and the presence of the mighty lion, Aslan. Filled with allegory and wonder, this timeless tale explores themes of bravery, sacrifice, and the triumph of good over evil.",
+        "cover_link": "search?q=the+lion+the+witch+and+the+wardrobe+book+cover"
+    },
+    {
+        "id": 8,
+        "title": "A Game of Thrones",
+        "author": "George R.R. Martin",
+        "release_year": 1996,
+        "genre": "Epic Fantasy",
+        "description": "George R.R. Martin's 'A Game of Thrones' marks the beginning of the epic 'A Song of Ice and Fire' series. Set in the complex and treacherous world of Westeros, noble families vie for the Iron Throne. Political intrigue, moral ambiguity, and a rich cast of characters make this a gripping tale where no one is safe and winter is always coming.",
+        "cover_link": "search?q=a+game+of+thrones+book+cover"
+    },
+    {
+        "id": 9,
+        "title": "The Fellowship of the Ring",
+        "author": "J.R.R. Tolkien",
+        "genre": "High Fantasy",
+        "description": "The first volume of J.R.R. Tolkien's epic trilogy, 'The Fellowship of the Ring,' continues the journey in Middle-earth. Frodo Baggins, accompanied by a diverse group of companions, sets out to destroy the One Ring and prevent the dark lord Sauron from unleashing his malevolence upon the world. Filled with rich landscapes, captivating characters, and the enduring themes of friendship and sacrifice, this classic is a cornerstone of fantasy literature.",
+        "year": 1954,
+        "image":"https://m.media-amazon.com/images/I/81i1-a1lq9L._AC_UF1000,1000_QL80_.jpg"
     }
 ]
