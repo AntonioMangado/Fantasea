@@ -1,4 +1,8 @@
-[
+require('../../config/db_mongo')
+const mongoose = require('mongoose');
+const Book = require("../../models/books.models")
+
+const books = [
     {
         "id": 1,
         "title": "The Hobbit",
@@ -341,4 +345,18 @@
         "year": 2013,
         "image": "https://m.media-amazon.com/images/I/81eAekpmyiL._AC_UF1000,1000_QL80_.jpg"
     }
-  ]
+]
+
+Book.deleteMany()
+    .then(function(){
+        console.log("All book data deleted");}) // Success
+    .catch(function(error){
+        console.log(error); // Failure
+    });
+
+Book.insertMany(books)
+    .then(function(){ 
+        console.log("Data inserted")})  // Success 
+    .catch(function(error){ 
+        console.log(error)      // Failure 
+    });
