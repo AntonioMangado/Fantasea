@@ -53,15 +53,15 @@ module.exports = Book;
 
 // Insertar un libro de prueba
 
-const p = new Book({
-    id: 1,
-    title: "Don Quixote",
-    author: "Miguel de Cervantes",
-    genre: "Medieval Fantasy",
-    description: "Don Quixote, or The Ingenius Gentleman Don Quixote of La Mancha, written by Miguel de Cervantes Saavedra, is a novel about a man with questionable sanity who goes on a series of quests to become a knight, accompanied by his 'squire', Sancho.",
-    year: 1605,
-    image:"https://m.media-amazon.com/images/I/41RrI0dPBBL.jpg"
-});
+// const p = new Book({
+//     id: 1,
+//     title: "Don Quixote",
+//     author: "Miguel de Cervantes",
+//     genre: "Medieval Fantasy",
+//     description: "Don Quixote, or The Ingenius Gentleman Don Quixote of La Mancha, written by Miguel de Cervantes Saavedra, is a novel about a man with questionable sanity who goes on a series of quests to become a knight, accompanied by his 'squire', Sancho.",
+//     year: 1605,
+//     image:"https://m.media-amazon.com/images/I/41RrI0dPBBL.jpg"
+// });
 
 // // Borrar y Guardar en la BBDD
 
@@ -71,6 +71,6 @@ const p = new Book({
 //     }).catch(function(error){
 //         console.log(error); // Failure
 //     });
-p.save()
-.then((data)=>console.log(data))
-.catch(err=>console.log(err));
+// p.save()
+// .then((data)=>console.log(data))
+// .catch(err=>console.log(err));
