@@ -1,0 +1,22 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #98EECC;
+    color: #A4907C;;
+
+    height: 50px;
+    padding-top: 7px;
+    border-bottom: 1px solid #A4907C;
+}
+
+#logo-container {
+    display: flex;
+    align-items: center;
+}
+
+#bg-menu-pic {
+    width: 30px;
+    margin-right: 7px;
+}
