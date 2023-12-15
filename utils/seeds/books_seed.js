@@ -100,7 +100,7 @@ const books = [
         "genre": "Epic Fantasy",
         "description": "Enter the richly detailed world of Roshar, where powerful magical storms shape the landscape and magic-wielding Knights Radiant battle ancient evils. As political intrigue unfolds, follow the lives of characters bound by destiny and honor.",
         "year": 2010,
-        "image": "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/91KzZWpgmyL._AC_UF1000,1000_QL80_.jpgl"
+        "image": "https://m.media-amazon.com/images/I/91UDzcPH-nL._AC_UF894,1000_QL80_.jpg"
     },
     {
         "id": 12,

@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes, Navigate } from 'react-router-dom'
 import SearchComp from './SearchComp'
 import Home from './Home'
+import DetailedView from './SearchComp/SearchList/DetailedView'
 
 
 const Main = () => {
@@ -11,7 +12,7 @@ const Main = () => {
         <Route path='/' element={<Home />} />
         <Route path='/home' element={<Home />} />
         <Route path='/search' element={<SearchComp />} />
-        <Route path='/*' element={<Navigate to={'/'} />} />
+        <Route path='/search/details/:id' element={<DetailedView />} />
     </Routes>
   </main>
   );

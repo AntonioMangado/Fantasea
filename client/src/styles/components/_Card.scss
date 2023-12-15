@@ -1,0 +1,53 @@
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#card-container > a {
+    text-decoration: none;
+    color: #A4907C;
+}
+
+
+.card {
+    display: flex;
+    margin: 10px;
+
+    text-align: center;
+    align-items: center;
+
+    border: 1px solid #A4907C;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 0.3s;
+}
+
+.card:hover {
+    background-color: rgb(237, 237, 237);
+    transition: 0.3s;
+}
+
+.search-cover-img {
+    width: 100px;
+
+    padding: 10px;
+}
+
+.main-info{
+    width: 195px;
+}
+
+button.drop-down-btn {
+    color: #A4907C;
+    background-color: white;
+
+    font-family: serif;
+}
+
+#basic-menu > div.MuiPaper-root > ul > li {
+    color: #A4907C;
+    font-family: serif;
+
+    justify-content: center;
+}
