@@ -1,10 +1,17 @@
 // Variables globales
 require("dotenv").config();
 require('./config/db_mongo') 
+const cors = require('cors')
 const express = require('express')
 const app = express()
 const port = 3000
 const bookRoutes = require('./routes/books.routes')
+
+
+// Para evitar problemas de CORS (Cross-Origin Resource Sharing)
+// Añado un middleWare que permite consultas desde orígines de terceros
+// ...
+app.use(cors());
 
 // Habilito recepción de JSON en servidor.
 app.use(express.json())
