@@ -8,6 +8,7 @@ const SearchList = ({ bookList}) => {
     return bookList.map(item => (
       <Card 
             key={uuidv4()}
+            id={item.id}
             title={item.title} 
             author={item.author} 
             year={item.year} 

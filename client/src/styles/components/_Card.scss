@@ -1,9 +1,23 @@
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#card-container > a {
+    text-decoration: none;
+    color: #A4907C;
+}
+
 .card {
     display: flex;
-    padding: 10px;
+    margin: 10px;
 
     text-align: center;
     align-items: center;
+
+    border: 1px solid #A4907C;
+    background-color: white;
 }
 
 .search-cover-img {
@@ -13,5 +27,5 @@
 }
 
 .main-info{
-    min-width: 195px;
+    width: 195px;
 }
