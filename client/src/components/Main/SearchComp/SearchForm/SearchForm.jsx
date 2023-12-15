@@ -7,7 +7,16 @@ const SearchForm = ({updateList}) => {
     e.preventDefault();
     const query = e.target.book.value;
     let res = await axios.get(`http://localhost:3000/api/books/${query}`)
-    let books = res.data // => [{}, {}, {}...]
+    let data = res.data // => [{}, {}, {}...]
+    // Tratamiento de datos
+    let books = data.map(item => ({
+      id: item.id,
+      title: item.title,
+      author: item.author,
+      genre: item.genre,
+      year: item.year,
+      image: item.image
+    }))
     // console.log(books)
     updateList(books)
   }

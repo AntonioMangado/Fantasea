@@ -19,7 +19,7 @@ const SearchComp = () => {
   return (
   <section id="search-container">
     <SearchForm updateList={updateBookList}/>
-    <SearchList/>
+    <SearchList bookList={bookList}/>
   </section>
   );
 };
