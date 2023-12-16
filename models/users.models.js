@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 require('../config/db_mongo') // Conexión a BBDD MongoDB
+const bcrypt = require('bcrypt') 
 
 const objectSchema = {
     username: { 
@@ -44,12 +45,21 @@ const objectSchema = {
 // Crear el esquema
 const userSchema = mongoose.Schema(objectSchema);
 
+// Pre middleware para hashear la password                                                                                                                                                                         
+userSchema.pre('save', function(next) {                                                                                                                                        
+    if (this.password) {                                                                                                                                                        
+        let salt = bcrypt.genSaltSync(8)                                                                                                                                     
+        this.password = bcrypt.hashSync(this.password, salt)                                                                                                                
+    }                                                                                                                                                                          
+    next()                                                                                                                                                                     
+}) 
+
 // Crear el modelo --> Colección
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;
 
-// Insertar un libro de prueba
+// Insertar un user de prueba
 
 const u = new User({
     username: "Maria",
