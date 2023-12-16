@@ -61,20 +61,20 @@ module.exports = User;
 
 // Insertar un user de prueba
 
-const u = new User({
-    username: "Maria",
-    email: "usersinarray@gmail.com",
-    password: "password123",
-    image:"https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png",
-});
+// const u = new User({
+//     username: "Maria",
+//     email: "usersinarray@gmail.com",
+//     password: "password123",
+//     image:"https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png",
+// });
 
-User.deleteMany()
-    .then(function(){
-        console.log("Data deleted"); // Success
-    }).catch(function(error){
-        console.log(error); // Failure
-    });
+// User.deleteMany()
+//     .then(function(){
+//         console.log("Data deleted"); // Success
+//     }).catch(function(error){
+//         console.log(error); // Failure
+//     });
 
-u.save()
-.then((data)=>console.log(data))
-.catch(err=>console.log(err))
+// u.save()
+// .then((data)=>console.log(data))
+// .catch(err=>console.log(err))
