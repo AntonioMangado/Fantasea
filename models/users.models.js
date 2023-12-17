@@ -28,7 +28,8 @@ const objectSchema = {
                 }º
             }, 
             message: "Only .jpg and .png formats allowed."
-        }
+        },
+        default: "https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-512.png"
     },
     toread:{
         type: [String],
@@ -65,7 +66,7 @@ module.exports = User;
 //     username: "Maria",
 //     email: "usersinarray@gmail.com",
 //     password: "password123",
-//     image:"https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png",
+//     // image:"https://static.vecteezy.com/system/resources/thumbnails/019/896/012/small_2x/female-user-avatar-icon-in-flat-design-style-person-signs-illustration-png.png",
 // });
 
 // User.deleteMany()
