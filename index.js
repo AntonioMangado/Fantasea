@@ -16,6 +16,7 @@ app.use(cors());
 
 // Habilito recepción de JSON en servidor.
 app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
 
 // Ruta de template
 app.get('/', function(req, res){
