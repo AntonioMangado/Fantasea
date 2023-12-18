@@ -4,7 +4,8 @@ const router = require('express').Router()
 const userControllers = require('../controllers/users.controllers')
 
 router.get("/api/users/:username", (userControllers.getUser))
-router.get("/api/logout", (userControllers.logOutUser))
 router.post("/api/users", (userControllers.createUser))
+router.post("/api/login", (userControllers.loginUser))
+router.get("/api/logout", (userControllers.logOutUser))
 
 module.exports = router

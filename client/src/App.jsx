@@ -10,11 +10,7 @@ function App() {
 
   const [ username, setUsername ] = useState("")
 
-  const updateUsername = (newUsername) => {
-    setUsername(newUsername)
-  }
-
-  const userData = { username, updateUsername }
+  const userData = { username, setUsername }
 
   return (
     <>

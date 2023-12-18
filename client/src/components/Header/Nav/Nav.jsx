@@ -1,13 +1,11 @@
 import { React, useContext } from "react";
-// import Cookies from 'js-cookie'
-import BurgerMenu from './BurgerMenu'
 import Logo from '../../../assets/logo.png'
 import BurgerMenuPic from '../../../assets/burger-menu.png'
 import { UserContext } from "../../../context/UserContext";
 
 const Nav = () => {
 
-  const { username, updateUsername } = useContext(UserContext);
+  const { username } = useContext(UserContext);
   
   return (
   <nav>

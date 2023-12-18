@@ -3,16 +3,14 @@ import { Link, useLocation } from 'react-router-dom'
 import { UserContext } from "../../../context/UserContext";
 
 const Home = () => {
-
+  
+  const { setUsername } = useContext(UserContext);
   const location = useLocation();
   const userName = new URLSearchParams(location.search).get('user');
-  console.log(userName)
 
-  const { updateUsername } = useContext(UserContext);
-  
   useEffect(() => {
-    updateUsername(userName)
-  }, [userName])
+      setUsername(userName)
+  }, [userName]);
   
 
   // Intento de sacar el usuario antes de darme cuenta de que ya lo tenia sacado con la linea 8.
