@@ -17,7 +17,15 @@ const getUser = async (req, res) => {
         console.log(`ERROR: ${error.stack}`);
         res.status(400).json({msj:`ERROR: ${error.stack}`});
     }
-    }
+ }
+
+const logOutUser = async (req, res) => {
+    //    req.session.destroy();
+       res.clearCookie("logged-email");
+       res.clearCookie("username");
+       res.clearCookie("access-token").redirect('http://localhost:5173/login');
+       console.log("User logged out")
+}
 
 
 // POST
@@ -60,5 +68,6 @@ const createUser = async (req, res) => {
 
 module.exports = {
     createUser,
-    getUser
+    getUser,
+    logOutUser
 }

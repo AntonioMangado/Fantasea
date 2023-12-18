@@ -7,7 +7,7 @@ import { UserContext } from "../../../context/UserContext";
 
 const Nav = () => {
 
-  const { username } = useContext(UserContext);
+  const { username, updateUsername } = useContext(UserContext);
   
   return (
   <nav>
@@ -15,7 +15,12 @@ const Nav = () => {
       <img src={Logo} alt="app-logo" />
       <span>Fantasea.</span>
     </div>
-    <img id="bg-menu-pic" src={BurgerMenuPic} alt="" />
+    <div>
+      {username != "" ?
+      <><form action="http://localhost:3000/api/logout" method="get"><button type="submit">LOG OUT</button></form></>:[]}
+      <img id="bg-menu-pic" src={BurgerMenuPic} alt="" />
+    </div>
+    
   </nav>
   );
 };

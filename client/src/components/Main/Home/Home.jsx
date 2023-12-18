@@ -1,4 +1,4 @@
-import { React, useContext } from "react";
+import { React, useContext, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom'
 import { UserContext } from "../../../context/UserContext";
 
@@ -9,7 +9,11 @@ const Home = () => {
   console.log(userName)
 
   const { updateUsername } = useContext(UserContext);
-  updateUsername(userName)
+  
+  useEffect(() => {
+    updateUsername(userName)
+  }, [userName])
+  
 
   // Intento de sacar el usuario antes de darme cuenta de que ya lo tenia sacado con la linea 8.
   // useEffect(() => {
