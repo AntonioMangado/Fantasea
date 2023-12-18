@@ -1,6 +1,6 @@
 import { React, useContext } from "react";
 import Logo from '../../../assets/logo.png'
-import BurgerMenuPic from '../../../assets/burger-menu.png'
+import BurgerMenu from './BurgerMenu'
 import { UserContext } from "../../../context/UserContext";
 
 const Nav = () => {
@@ -14,9 +14,9 @@ const Nav = () => {
       <span>Fantasea.</span>
     </div>
     <div id="end-container">
-      {username != "" ?
+      {username != "" && username != null ?
       <><form action="http://localhost:3000/api/logout" method="get"><button type="submit">LOG OUT</button></form></>:[]}
-      <img id="bg-menu-pic" src={BurgerMenuPic} alt="" />
+      <BurgerMenu/>
     </div>
     
   </nav>
