@@ -115,9 +115,71 @@ const loginUser = async (req, res) => {
     }
  }
 
+// Update
+const updateUserList = async (req, res) => {
+try {
+    const username = req.params.username; //Nombre del usuario logueado
+    const data = req.body; //Columna a editar y nombre del libro
+    console.log(username);
+    console.log(req.body)
+    if (req.body.read) {
+        const bookTitle = data.read
+        let user = await User.find({ username: username })
+        if (user != null) {
+            await User.updateOne(
+                {username: username}, 
+                { $push: {read: bookTitle}},
+                );
+            console.log("Book stored in read list")
+            res.status(200)
+            }
+    } else if (req.body.toread) {
+        const bookTitle = data.toread
+        let user = await User.find({ username: username })
+        if (user != null) {
+            await User.updateOne(
+                {username: username}, 
+                { $push: {toread: bookTitle}},
+                );
+            console.log("Book stored in toread list")
+            res.status(200)}
+    
+    } else if (req.body.reading) {
+        const bookTitle = data.reading
+        let user = await User.find({ username: username })
+        if (user != null) {
+            await User.updateOne(
+                {username: username}, 
+                { $push: {reading: bookTitle}},
+                );
+            console.log("Book stored in reading list")
+            res.status(200)
+            }}
+    
+    // if (req.params.id != "") {
+    //     const books = await Book.find({id: id})
+    //     if (books != null) {
+    //         await Book.updateOne({id: id}, data)
+    //         res.status(200).json({message: "Book successfully edited", book: await Book.find({id: id})})
+    //         } else {
+    //         res.status(404).send("Libro no encontrado: " + req.params.id)
+    //         }
+    // } 
+    // else {
+    //     await Product.updateMany({}, { $set: data });
+    //     res.status(200).json({message: "Books successfully edited"})
+    // }
+    }
+catch (error) {
+    console.log(`ERROR: ${error.stack}`);
+    res.status(400).json({msj:`ERROR: invalid body format`});
+}
+}
+
 module.exports = {
     createUser,
     getUser,
+    updateUserList,
     loginUser,
     logOutUser
 }

@@ -28,7 +28,7 @@ const DetailedView =  () => {
             <h2 id="author">by {book[0].author}, {book[0].year}.</h2>
             <p>{book[0].description}</p>
             <p id="genre">Genre: {book[0].genre}</p>
-            <DropDownMenu/>
+            <DropDownMenu book={book}/>
           </div>
         </> : [] }
     </section>
