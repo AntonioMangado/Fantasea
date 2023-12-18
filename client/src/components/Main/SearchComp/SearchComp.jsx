@@ -12,10 +12,6 @@ const SearchComp = () => {
     setBookList(data)
   }
 
-  useEffect(() => {}, [bookList])
-
-
-
   return (
   <section id="search-container">
     <SearchForm updateList={updateBookList}/>

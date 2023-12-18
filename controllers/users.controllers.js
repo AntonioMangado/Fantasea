@@ -120,8 +120,8 @@ const updateUserList = async (req, res) => {
 try {
     const username = req.params.username; //Nombre del usuario logueado
     const data = req.body; //Columna a editar y nombre del libro
-    console.log(username);
-    console.log(req.body)
+    // console.log(username);
+    // console.log(req.body)
     if (req.body.read) {
         const bookTitle = data.read
         let user = await User.find({ username: username })
@@ -155,20 +155,6 @@ try {
             console.log("Book stored in reading list")
             res.status(200).json({msg: "Book stored"})
             }}
-    
-    // if (req.params.id != "") {
-    //     const books = await Book.find({id: id})
-    //     if (books != null) {
-    //         await Book.updateOne({id: id}, data)
-    //         res.status(200).json({message: "Book successfully edited", book: await Book.find({id: id})})
-    //         } else {
-    //         res.status(404).send("Libro no encontrado: " + req.params.id)
-    //         }
-    // } 
-    // else {
-    //     await Product.updateMany({}, { $set: data });
-    //     res.status(200).json({message: "Books successfully edited"})
-    // }
     }
 catch (error) {
     console.log(`ERROR: ${error.stack}`);

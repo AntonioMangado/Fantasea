@@ -4,8 +4,9 @@ import Logo from '../../../assets/logo.png'
 const Login = () => {
   return (
   <section id="login-section">
-    <img src={Logo} alt="" id="login-logo"/>
-    <h2>Welcome to Fantasea.<br />Login to start exploring.</h2>
+    
+    <h2>Welcome to </h2><img src={Logo} alt="" id="login-logo"/>
+    <h3>Login to start exploring.</h3>
     <form action="http://localhost:3000/api/login" method="post">
       <label htmlFor="username">Email</label>
       <input type="email" name="email" placeholder="Your email..."/>

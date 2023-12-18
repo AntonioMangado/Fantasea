@@ -12,7 +12,6 @@ const Nav = () => {
   <nav>
     <div id="logo-container">
       <img src={Logo} alt="app-logo" />
-      <span>Fantasea.</span>
     </div>
     <div id="end-container">
       {username != "" && username != null ?
@@ -20,7 +19,6 @@ const Nav = () => {
       <><Link to="/login"><button id="nav-login-btn">LOG IN</button></Link></>}
       <BurgerMenu/>
     </div>
-    
   </nav>
   );
 };
