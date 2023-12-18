@@ -13,7 +13,7 @@ const Nav = () => {
       <img src={Logo} alt="app-logo" />
       <span>Fantasea.</span>
     </div>
-    <div>
+    <div id="end-container">
       {username != "" ?
       <><form action="http://localhost:3000/api/logout" method="get"><button type="submit">LOG OUT</button></form></>:[]}
       <img id="bg-menu-pic" src={BurgerMenuPic} alt="" />
