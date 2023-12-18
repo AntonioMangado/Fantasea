@@ -15,7 +15,7 @@ const Register = () => {
   return (
   <section id="register-section">
     <img src={Logo} alt="" id="register-logo"/>
-    <h2>Create an account.</h2>
+    <h3>Create an account.</h3>
     <form action="http://localhost:3000/api/users" method="post">
       <label htmlFor="username">Username</label>
       <input type="text" name="username" placeholder="Your username..."/>

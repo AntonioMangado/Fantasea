@@ -1,5 +1,7 @@
 body {
     margin: 0;
+    font-family: 'Inknut Antiqua', serif;
+    line-height: 200%;
 }
 
 #root {
@@ -14,6 +16,7 @@ body {
 
 button {
     font-family: serif;
+    font-size: large;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
 }
 

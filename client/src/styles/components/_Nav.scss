@@ -7,6 +7,7 @@ nav {
     color: #A4907C;;
 
     height: 50px;
+    width: 100vw;
     padding-top: 7px;
     border-bottom: 1px solid #A4907C;
 }
@@ -14,6 +15,11 @@ nav {
 #logo-container {
     display: flex;
     align-items: center;
+}
+
+#logo-container > img {
+    width: 125px;
+    margin-left: 10px;
 }
 
 #bg-menu-pic {
@@ -28,9 +34,11 @@ nav {
 }
 
 #end-container > form {
-    margin-right: 50px;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }
 
 #end-container #nav-login-btn {
-    margin-right: 50px;
+    margin-right: 10px;
+    margin-bottom: 5px;
 }

@@ -27,6 +27,7 @@ const SearchForm = ({updateList}) => {
       <h3>What are you looking for?</h3>
       <input type="text" name="book"/>
       <button type="submit">SEARCH</button>
+      <button type="submit">GIVE ME ALL BOOKS</button>
     </form>
   </article>
   );

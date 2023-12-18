@@ -61,15 +61,19 @@ function DropDownMenu({ book }) {
         READING OPTIONS
       </Button>
       {showAlert ? <>
-                      <Alert severity="success" onClose={() => {setShowAlert(false)}} sx={{
-                                                                                          marginTop: 2,
-                                                                                          width: 200
-                                                                                        }}>
-                        <AlertTitle>Success!</AlertTitle>
-                        The book was added successfully.
+          { username ? <>
+                          <Alert severity="success" onClose={() => {setShowAlert(false)}} sx={{ marginTop: 2, width: 200}}>
+                            <AlertTitle>Success!</AlertTitle>
+                            The book was added successfully.
+                        </Alert>
+                      </> : 
+                      <>
+                      <Alert severity="info" onClose={() => {setShowAlert(false)}} sx={{ marginTop: 2, width: 200}}>
+                      <AlertTitle>Info</AlertTitle>
+                            Please log in to add books to your lists.
                       </Alert>
+                      </>}
                     </> : <></>}
-      
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
