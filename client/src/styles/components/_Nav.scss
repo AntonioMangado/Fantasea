@@ -20,3 +20,13 @@ nav {
     width: 30px;
     margin-right: 7px;
 }
+
+#end-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+#end-container > form {
+    margin-right: 10px;
+}
