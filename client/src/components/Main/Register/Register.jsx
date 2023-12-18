@@ -4,13 +4,13 @@ import { UserContext } from "../../../context/UserContext";
 
 const Register = () => {
 
-  const { username, updateUsername } = useContext(UserContext);
+  // const { username, updateUsername } = useContext(UserContext);
 
-  const handleChange = (e) => {
-    let newUsername = e.target.value;
+  // const handleChange = (e) => {
+  //   let newUsername = e.target.value;
 
-    updateUsername(newUsername)
-  }
+  //   updateUsername(newUsername)
+  // }
 
   return (
   <section id="register-section">
@@ -18,7 +18,7 @@ const Register = () => {
     <h2>Create an account.</h2>
     <form action="http://localhost:3000/api/users" method="post">
       <label htmlFor="username">Username</label>
-      <input type="text" name="username" placeholder="Your username..." onChange={handleChange} />
+      <input type="text" name="username" placeholder="Your username..."/>
       <label htmlFor="email">Email</label>
       <input type="email" name="email" placeholder="Your email..."/>
       <label htmlFor="password">Password</label>

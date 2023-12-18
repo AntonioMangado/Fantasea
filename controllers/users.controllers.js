@@ -131,7 +131,7 @@ try {
                 { $push: {read: bookTitle}},
                 );
             console.log("Book stored in read list")
-            res.status(200)
+            res.status(200).json({msg: "Book stored"})
             }
     } else if (req.body.toread) {
         const bookTitle = data.toread
@@ -142,7 +142,7 @@ try {
                 { $push: {toread: bookTitle}},
                 );
             console.log("Book stored in toread list")
-            res.status(200)}
+            res.status(200).json({msg: "Book stored"})}
     
     } else if (req.body.reading) {
         const bookTitle = data.reading
@@ -153,7 +153,7 @@ try {
                 { $push: {reading: bookTitle}},
                 );
             console.log("Book stored in reading list")
-            res.status(200)
+            res.status(200).json({msg: "Book stored"})
             }}
     
     // if (req.params.id != "") {
