@@ -1,0 +1,44 @@
+#detailed-view {
+    padding: 20px;
+    display: flex;
+
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#detailed-view-img {
+    width: 25%;
+    min-width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#main-info-cont {
+    width: 70%;
+    padding: 20px;
+}
+
+#title {
+    font-size: 2.3em;
+    margin: 0;
+}
+
+#author {
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+#genre {
+    font-weight: 100;
+    margin-top: 5px;
+}
+
+.info-btns {
+    margin-right: 10px;
+}
+
+#dropdown-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
