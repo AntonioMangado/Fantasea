@@ -11,7 +11,7 @@ const DetailedView =  () => {
 
   useEffect(() => {
     const getBook = async () => {
-      let res = await axios.get(`http://localhost:3000/api/books/${bookTitle}`)
+      let res = await axios.get(`https://fantasea.onrender.com/api/books/${bookTitle}`)
       let data = res.data // => [{}]
       setBook(data)
     }

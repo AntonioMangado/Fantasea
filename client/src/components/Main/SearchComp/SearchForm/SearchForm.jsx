@@ -6,7 +6,7 @@ const SearchForm = ({updateList}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const query = e.target.book.value;
-    let res = await axios.get(`http://localhost:3000/api/books/${query}`)
+    let res = await axios.get(`https://fantasea.onrender.com/api/books/${query}`)
     let data = res.data // => [{}, {}, {}...]
     // Tratamiento de datos
     let books = data.map(item => ({

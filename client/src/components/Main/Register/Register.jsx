@@ -16,7 +16,7 @@ const Register = () => {
   <section id="register-section">
     <img src={Logo} alt="" id="register-logo"/>
     <h3>Create an account.</h3>
-    <form action="http://localhost:3000/api/users" method="post">
+    <form action="https://fantasea.onrender.com/api/users" method="post">
       <label htmlFor="username">Username</label>
       <input type="text" name="username" placeholder="Your username..."/>
       <label htmlFor="email">Email</label>

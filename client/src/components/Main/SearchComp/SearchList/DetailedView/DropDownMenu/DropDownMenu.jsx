@@ -20,7 +20,7 @@ function DropDownMenu({ book }) {
   };
 
   const handleRead = async () => {
-    const res = await axios.put(`http://localhost:3000/api/users/${username}`, {
+    const res = await axios.put(`https://fantasea.onrender.com/api/users/${username}`, {
       read: book[0].title
     })
     console.log(res)
@@ -29,7 +29,7 @@ function DropDownMenu({ book }) {
   }
 
   const handleReading = async () => {
-    await axios.put(`http://localhost:3000/api/users/${username}`, {
+    await axios.put(`https://fantasea.onrender.com/api/users/${username}`, {
       reading: book[0].title
     })
     setShowAlert(true)
@@ -37,7 +37,7 @@ function DropDownMenu({ book }) {
   }
 
   const handleToRead = async () => {
-    await axios.put(`http://localhost:3000/api/users/${username}`, {
+    await axios.put(`https://fantasea.onrender.com/api/users/${username}`, {
       toread: book[0].title
     })
     setShowAlert(true)
