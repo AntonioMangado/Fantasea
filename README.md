@@ -33,7 +33,7 @@ Since this is a fullstack app, a wide pletora of frameworks and libraries were u
 ## Contributing:
 Should you feel inclined to contribute to this project in any way or manner, please feel free to do so. Any help, in the form of code or ideas, will be warmly welcome. Follow the steps below to seed you db and get the project going.
 
-# Steps to replicate the db after cloning the project:
+### Steps to replicate the db after cloning the project:
 1. Create your db on Mongo Atlas.
 2. Input your db URI in your .env following the .env.example.
 3. Run 'npm run populatedb'
