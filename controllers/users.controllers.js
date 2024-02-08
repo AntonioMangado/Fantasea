@@ -70,16 +70,16 @@ const createUser = async (req, res) => {
 // POST
 const loginUser = async (req, res) => {
     console.log(req.body);
-    const {email, password} = req.body
+    const {email, pwd} = req.body
     // console.log(email)
     // console.log(password)
     try {
         let user = await User.find({ email: email })
         if (user.length > 0) {
             const hashedPassword = user[0].password
-            console.log(password)
+            console.log(pwd)
             console.log(hashedPassword)
-            const match = await bcrypt.compare(password, hashedPassword)
+            const match = await bcrypt.compare(pwd, hashedPassword)
             if (match) {
                 const userForToken = {
                     username: user[0].username,
@@ -101,7 +101,7 @@ const loginUser = async (req, res) => {
                     httpOnly: true,
                     sameSite: "strict",
                 })
-                res.status(201).redirect(`http://localhost:5173/home/u?user=${user[0].username}`);
+                res.status(201).json({ username: user[0].username, email: user[0].email, accessToken: token });
             } else {
                 res.status(400).json({msg: "Incorrect email or password."})
             }

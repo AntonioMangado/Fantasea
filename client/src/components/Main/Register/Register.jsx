@@ -1,6 +1,6 @@
 import { React, useContext  } from "react";
 import Logo from '../../../assets/logo.png'
-import { UserContext } from "../../../context/UserContext";
+import AuthContext from "../../../context/AuthProvider";
 
 const Register = () => {
 

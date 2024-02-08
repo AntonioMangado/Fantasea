@@ -1,20 +1,16 @@
-import * as React from 'react'
+import { useContext, useEffect } from 'react'
 import { slide as Menu } from 'react-burger-menu'
-import { UserContext } from '../../../../context/UserContext';
+import AuthContext from '../../../../context/AuthProvider'
 import { Link, useLocation, useSearchParams } from 'react-router-dom'
 
 const BurgerMenu = () => {
 
   const location = useLocation();
   const userName = new URLSearchParams(location.search).get('user');
+  const { auth } = useContext(AuthContext)
   console.log(userName)
-  const {username, setUsername} = React.useContext(UserContext)
-
-  React.useEffect(() => {
-    setUsername(userName)
-  }, [userName])
     
-    const myMoviesURL = `mymovies/u?user=${username}`
+    const myMoviesURL = `mymovies/u?user=${auth.username}`
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
       <Menu right >

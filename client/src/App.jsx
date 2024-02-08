@@ -1,6 +1,6 @@
 import { BrowserRouter } from 'react-router-dom'
 import { useState } from 'react'
-import { UserContext } from './context/UserContext'
+import { AuthProvider } from './context/AuthProvider'
 import Header from './components/Header'
 import Main from './components/Main'
 import Footer from './components/Footer'
@@ -15,10 +15,10 @@ function App() {
   return (
     <>
       <BrowserRouter >
-        <UserContext.Provider value={ userData }>
+        <AuthProvider>
           <Header/>
           <Main/>
-        </UserContext.Provider>
+        </AuthProvider>
       </BrowserRouter>
       <Footer/>
     </>
