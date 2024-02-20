@@ -8,10 +8,8 @@ const LOGIN_URL = "api/login"
 const Login = () => {
 
   const navigate = useNavigate()
-
   const { setAuth } = useContext(AuthContext)
   const errRef = useRef()
-
   const [email, setEmail] = useState("")
   const [pwd, setPwd] = useState("")
   const [errMsg, setErrMsg] = useState("")
@@ -34,11 +32,12 @@ const Login = () => {
       const userEmail = response?.data?.email
       const accessToken = response?.data?.accessToken
       setAuth({ username, userEmail, accessToken })
+      localStorage.setItem("authenticated", true)
       setEmail("")
       setPwd("")
       navigate("/home")
       
-  } catch (err) {
+    } catch (err) {
       if (!err?.response) {
           setErrMsg("No Server Response")
       } else if (err.response?.status === 400) {
@@ -49,13 +48,11 @@ const Login = () => {
           setErrMsg("Login failed")
       }
       errRef.current.focus()
-  }
-
+    }
   }
 
   return (
   <section id="login-section">
-    
     <h2>Welcome to </h2><img src={Logo} alt="" id="login-logo"/>
     <h3>Login to start exploring.</h3>
     <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"} aria-live="assertive">{errMsg}</p>
