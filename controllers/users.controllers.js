@@ -31,9 +31,9 @@ const logOutUser = async (req, res) => {
 
 // POST
 const createUser = async (req, res) => {
-    const { password, password2 } = req.body;
-
-    if (password == password2) {
+    const { pwd, pwd2 } = req.body;
+    console.log(req.body)
+    if (pwd == pwd2) {
         try{
             const user = req.body;
             console.log(user)
@@ -47,18 +47,22 @@ const createUser = async (req, res) => {
                 httpOnly: true,
                 sameSite: "strict",
             })
-            res.cookie("logged-email", req.body.email,{
+            res.cookie("logged-email", answer.email,{
                 httpOnly: true,
                 sameSite: "strict",
             })
-            res.cookie("username", req.body.username,{
+            res.cookie("username", answer.username,{
                 httpOnly: true,
                 sameSite: "strict",
             })
             
             // res.status(201).json({message: "User created", User: answer});
-            res.status(201).send({msg: "User registered"});
-            
+            res.status(201).json({
+                msg: "User registered",
+                username: answer.username,
+                email: answer.email,
+                accessToken: token
+            });
         } catch (error) {
             console.log(`ERROR: ${error.message}`);
             // if (error.includes("E11000")) {
@@ -81,7 +85,7 @@ const loginUser = async (req, res) => {
     try {
         let user = await User.find({ email: email })
         if (user.length > 0) {
-            const hashedPassword = user[0].password
+            const hashedPassword = user[0].pwd
             console.log(pwd)
             console.log(hashedPassword)
             const match = await bcrypt.compare(pwd, hashedPassword)

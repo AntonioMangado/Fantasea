@@ -15,8 +15,7 @@ const Main = () => {
         <Route path='/' element={<Login />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/home/:u?' element={<Home />} />
-        {/* <Route path='/home/mymovies/:u?' element={<MovieList />} /> */}
+        <Route path='/home' element={<Home />} />
         <Route path='/search' element={<SearchComp />} />
         <Route path='/search/details/:id' element={<DetailedView />} />
     </Routes>

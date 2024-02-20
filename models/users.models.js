@@ -13,7 +13,7 @@ const objectSchema = {
         required: true,
         unique: true 
     },
-    password: { 
+    pwd: { 
         type: String, 
         required: true 
     },
@@ -25,7 +25,7 @@ const objectSchema = {
                     return true;
                 else {
                     return false;
-                }º
+                }
             }, 
             message: "Only .jpg and .png formats allowed."
         },
@@ -48,9 +48,9 @@ const userSchema = mongoose.Schema(objectSchema);
 
 // Pre middleware para hashear la password                                                                                                                                                                         
 userSchema.pre('save', function(next) {                                                                                                                                        
-    if (this.password) {                                                                                                                                                        
+    if (this.pwd) {                                                                                                                                                        
         let salt = bcrypt.genSaltSync(8)                                                                                                                                     
-        this.password = bcrypt.hashSync(this.password, salt)                                                                                                                
+        this.pwd = bcrypt.hashSync(this.pwd, salt)                                                                                                                
     }                                                                                                                                                                          
     next()                                                                                                                                                                     
 }) 

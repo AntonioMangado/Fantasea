@@ -1,17 +1,9 @@
-import { React, useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, Navigate } from 'react-router-dom'
-
-
 
 const Home = () => {
 
-  const [authenticated, setAuthenticated] = useState(null);
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("authenticated")
-    if (loggedInUser) {
-      setAuthenticated(loggedInUser)
-    }
-  }, [])
+  let authenticated = localStorage.getItem("authenticated");
 
   if (!authenticated) {
     return <Navigate replace to="/login" />;
