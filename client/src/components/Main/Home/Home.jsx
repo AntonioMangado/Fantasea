@@ -1,24 +1,9 @@
 import { React, useContext, useEffect } from "react";
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 
 
 const Home = () => {
-  
-  const { setUsername } = useContext(UserContext);
-  const location = useLocation();
-  const userName = new URLSearchParams(location.search).get('user');
-  setUsername(userName)
-  
-
-  // Intento de sacar el usuario antes de darme cuenta de que ya lo tenia sacado con la linea 8.
-  // useEffect(() => {
-  //   const getUser = async () => {
-  //   let res = await axios.get(`http://localhost:3000/api/users/${userName}`)
-  //   let user = res.data;
-  //   console.log(user)
-  //   }
-  // getUser()
-  // }, [userName])
 
   return (
   <section id="home-page">
