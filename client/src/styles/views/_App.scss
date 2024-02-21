@@ -1,23 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    font-family: 'Inknut Antiqua', serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 200%;
 }
 
 #root {
     // background-color: white;
-    background-color: #FBFFDC;
-    color: #A4907C;
+    background: linear-gradient(135deg, #10acef 30%, #3c46d8);
+    color: #efefef;
+
 
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-button {
-    font-family: serif;
-    font-size: large;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+
+.btn-white {
+    width: 100%;
+    height: 45px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 40px;
+    color: #10acef;
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
 // UTILITIES

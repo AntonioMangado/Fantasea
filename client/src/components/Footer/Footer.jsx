@@ -1,11 +1,20 @@
-import React from "react";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthProvider";
+
 
 const Footer = () => {
+
+  const { auth } = useContext(AuthContext)
+
+
+
   return (
-  <footer>
-    <p>Fantasea.</p>
-    <p>2023, ™️</p>
-  </footer>
+  <>
+    {auth.username 
+        ? <footer><p>Fantasea.</p><p>2023, ™️</p></footer>
+        : <></>
+    }
+  </>
   );
 };
 

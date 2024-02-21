@@ -2,8 +2,10 @@ import { useContext, useState, useEffect, useRef  } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../../../api/axios";
 import Logo from '../../../assets/logo.png'
+import BackChevron from "../../../assets/icons/back-chevron.svg"
 import AuthContext from "../../../context/AuthProvider";
 const REGISTER_URL = "api/users";
+
 
 const Register = () => {
 
@@ -19,6 +21,10 @@ const Register = () => {
   useEffect(() => {
     setErrMsg("")
   }, [email, pwd])
+
+  const navigateLogin = () => {
+    navigate("/login")
+  }
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -49,45 +55,44 @@ const Register = () => {
 
   return (
   <section id="register-section">
-    <img src={Logo} alt="" id="register-logo"/>
-    <h3>Create an account.</h3>
+    {/* <img src={Logo} alt="" id="register-logo"/> */}
+    {/* <span>{BackChevron}</span> */}
+    <img onClick={navigateLogin} src={BackChevron} alt="Go back chevron" />
+    <h3>Create account</h3>
+    <p>Please fill the following details</p>
     <form onSubmit={handleRegister}>
-      <label htmlFor="username">Username</label>
       <input 
           type="text" 
           name="username"
           id="username" 
-          placeholder="Your username..."
+          placeholder="Username"
           onChange={(e) => setUsername(e.target.value)}
           value={username}
           required/>
-      <label htmlFor="email">Email</label>
       <input 
           type="email" 
           id="email" 
           name="email" 
-          placeholder="Your email..." 
+          placeholder="Email" 
           onChange={(e) => setEmail(e.target.value)}
           value={email}
           required
           autoComplete="off"/>
-      <label htmlFor="password">Password</label>
       <input 
           type="password" 
           name="password"
           id="password" 
-          placeholder="Your password..."
+          placeholder="Password"
           onChange={(e) => setPwd(e.target.value)} 
           value={pwd}/>
-      <label htmlFor="password2">Repeat your password</label>
       <input 
           type="password" 
           name="password2"
           id="password2" 
-          placeholder="Repear your password..."
+          placeholder="Confirm password"
           onChange={(e) => setPwd2(e.target.value)} 
           value={pwd2}/>
-      <button type="submit">Register</button>
+      <button type="submit" className="btn-white">Create account</button>
     </form>
   </section>
   );
