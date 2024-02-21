@@ -39,10 +39,15 @@
             border-radius: 8px;
             margin-top: 5px;
             margin-bottom: 15px;
+            color: #efefef;
         }
 
         input::placeholder {
             color: #efefef;
+        }
+
+        input:active {
+            border: 3px solid #efefef;
         }
 
         input:first-of-type {
@@ -51,11 +56,6 @@
 
         input:last-of-type {
             margin-bottom: 60px;
-        }
-
-        button:active {
-            position: relative;
-            top: 3px;
         }
     }
 }
