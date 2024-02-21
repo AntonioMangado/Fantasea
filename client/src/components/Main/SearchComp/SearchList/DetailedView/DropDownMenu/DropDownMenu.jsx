@@ -1,4 +1,5 @@
-import * as React from 'react';
+import { useState, useContext } from 'react';
+import AuthContext from '../../../../../../context/AuthProvider';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
@@ -8,9 +9,9 @@ import AlertTitle from '@mui/material/AlertTitle';
 import axios from 'axios'
 
 function DropDownMenu({ book }) {
-  const [ showAlert, setShowAlert ] = React.useState(false)
-  const { username } = React.useContext(UserContext)
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [ showAlert, setShowAlert ] = useState(false)
+  const { auth } = useContext(AuthContext)
+  const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -20,7 +21,7 @@ function DropDownMenu({ book }) {
   };
 
   const handleRead = async () => {
-    const res = await axios.put(`http://localhost:3000/api/users/${username}`, {
+    const res = await axios.put(`http://localhost:3000/api/users/${auth.username}`, {
       read: book[0].title
     })
     console.log(res)
@@ -29,7 +30,7 @@ function DropDownMenu({ book }) {
   }
 
   const handleReading = async () => {
-    await axios.put(`http://localhost:3000/api/users/${username}`, {
+    await axios.put(`http://localhost:3000/api/users/${auth.username}`, {
       reading: book[0].title
     })
     setShowAlert(true)
@@ -37,7 +38,7 @@ function DropDownMenu({ book }) {
   }
 
   const handleToRead = async () => {
-    await axios.put(`http://localhost:3000/api/users/${username}`, {
+    await axios.put(`http://localhost:3000/api/users/${auth.username}`, {
       toread: book[0].title
     })
     setShowAlert(true)
@@ -61,7 +62,7 @@ function DropDownMenu({ book }) {
         READING OPTIONS
       </Button>
       {showAlert ? <>
-          { username ? <>
+          { auth ? <>
                           <Alert severity="success" onClose={() => {setShowAlert(false)}} sx={{ marginTop: 2, width: 200}}>
                             <AlertTitle>Success!</AlertTitle>
                             The book was added successfully.
