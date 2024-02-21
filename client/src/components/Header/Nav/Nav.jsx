@@ -1,5 +1,4 @@
 import { React, useContext } from "react";
-import Logo from '../../../assets/logo.png'
 import BurgerMenu from './BurgerMenu'
 import AuthContext from "../../../context/AuthProvider";
 import { Link } from 'react-router-dom'
@@ -11,7 +10,6 @@ const Nav = () => {
   return (
   <nav>
     <div id="logo-container">
-      <img src={Logo} alt="app-logo" />
     </div>
     <div id="end-container">
       {auth.username != "" && auth.username != null ?

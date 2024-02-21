@@ -1,7 +1,6 @@
 import { useContext, useState, useEffect, useRef  } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "../../../api/axios";
-import Logo from '../../../assets/logo.png'
 import BackChevron from "../../../assets/icons/back-chevron.svg"
 import AuthContext from "../../../context/AuthProvider";
 const REGISTER_URL = "api/users";
@@ -55,8 +54,6 @@ const Register = () => {
 
   return (
   <section id="register-section">
-    {/* <img src={Logo} alt="" id="register-logo"/> */}
-    {/* <span>{BackChevron}</span> */}
     <img onClick={navigateLogin} src={BackChevron} alt="Go back chevron" />
     <h3>Create account</h3>
     <p>Please fill the following details</p>
