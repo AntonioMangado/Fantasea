@@ -4,41 +4,49 @@ nav {
     justify-content: space-between;
 
     background-color: #98EECC;
-    color: #A4907C;;
+    background-image: url('../../../public/assets/nav-background.webp');
+    color: #efefef;
 
-    height: 50px;
     width: 100vw;
-    padding-top: 7px;
+    height: 20vh;
     border-bottom: 1px solid #A4907C;
+    padding: 15px;
+
+    #welcome-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+
+        p, h2 {
+            margin: 0;
+        }
+    }
+
+    #search-bar-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        input {
+            width: 46px;
+            height: 30px;
+            border-radius: 50px;
+            border: none;
+
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/55/Magnifying_glass_icon.svg");
+            background-size: 18px;
+            background-repeat: no-repeat;
+            background-position: 14px center;
+        }
+    }
 }
 
-#logo-container {
-    display: flex;
-    align-items: center;
-}
 
-#logo-container > img {
-    width: 125px;
-    margin-left: 10px;
-}
 
-#bg-menu-pic {
-    width: 30px;
-    margin-right: 7px;
-}
 
-#end-container {
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-}
 
-#end-container > form {
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
 
-#end-container #nav-login-btn {
-    margin-right: 10px;
-    margin-bottom: 5px;
-}
+
+

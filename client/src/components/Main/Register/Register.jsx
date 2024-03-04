@@ -89,7 +89,7 @@ const Register = () => {
           placeholder="Confirm password"
           onChange={(e) => setPwd2(e.target.value)} 
           value={pwd2}/>
-      <button type="submit" className="btn-white" disabled={ !username || !email || !pwd || !pwd2 ? true : false }>Create account</button>
+      <button type="submit" className="btn-white" disabled={ !username || !email || !pwd || !pwd2 ? true : false }>CREATE ACCOUNT</button>
     </form>
   </section>
   );

@@ -1,5 +1,4 @@
-import { React, useContext } from "react";
-import BurgerMenu from './BurgerMenu'
+import { useContext } from "react";
 import AuthContext from "../../../context/AuthProvider";
 import { Link } from 'react-router-dom'
 
@@ -9,13 +8,12 @@ const Nav = () => {
   
   return (
   <nav>
-    <div id="logo-container">
+    <div id="welcome-container">
+      <p>Welcome,</p>
+      <h2>{auth.username}</h2>
     </div>
-    <div id="end-container">
-      {auth.username != "" && auth.username != null ?
-      <><form action="http://localhost:3000/api/logout" method="get"><button type="submit">LOG OUT</button></form></>:
-      <><Link to="/login"><button id="nav-login-btn">LOG IN</button></Link></>}
-      <BurgerMenu/>
+    <div id="search-bar-container">
+      <input type="text" name="search-bar" id="search-bar" />
     </div>
   </nav>
   );
