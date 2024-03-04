@@ -40,12 +40,25 @@ nav {
             background-repeat: no-repeat;
             background-position: 14px center;
         }
+
+        input:focus{
+            animation: expandSearchBar .3s ease-in-out;
+            animation-fill-mode: forwards;
+        }
     }
 }
 
 
-
-
+@keyframes expandSearchBar {
+    0% {
+        width: 46px;
+    }
+    100% {
+        width: 160px;
+        background: white;
+        padding: 0 10px;
+    }
+}
 
 
 
