@@ -13,7 +13,6 @@ function App() {
         <AuthProvider>
           <Header/>
           <Main/>
-          <Footer/>
         </AuthProvider>
       </BrowserRouter>
     </>

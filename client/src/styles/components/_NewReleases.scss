@@ -1,0 +1,26 @@
+#new-releases {
+    background-color: #efefef;
+    
+    .title-and-link {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 15px;
+        padding: 20px 0;
+
+        h3 {
+            color: #353535;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        a, a:visited {
+            color: #10acef;
+            text-decoration: none;
+        }
+    }
+
+    
+}
