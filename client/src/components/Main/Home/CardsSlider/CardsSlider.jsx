@@ -17,7 +17,7 @@ const CardsSlider = ({books}) => {
     ))
   }
 
-  return <article>{books.length > 0 ? renderBooks() : <p>There are no books</p>}</article>;
+  return <article className="card-slider">{books.length > 0 ? renderBooks() : <p>There are no books</p>}</article>;
 };
 
 export default CardsSlider;

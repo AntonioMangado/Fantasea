@@ -7,11 +7,12 @@ const Card = ({ id, title, author, year, image }) => {
   return (
   <Link to={queryUrl}> 
     <article className="card">
-      <img src={image} alt={title} className="search-cover-img"/>
-      <div className="main-info">
+      <div className="book-cover">
+        <img src={image} alt={title} className="search-cover-img"/>
+      </div>
+      <div className="book-info">
         <h3>{title}</h3>
         <p>{author}</p>
-        <p>{year}</p> 
       </div>
     </article>
   </Link>
