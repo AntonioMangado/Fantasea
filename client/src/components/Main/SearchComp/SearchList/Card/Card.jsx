@@ -8,7 +8,13 @@ const Card = ({ id, title, author, year, image }) => {
   <Link to={queryUrl} > 
     <article className="card">
       <div className="book-cover">
-        <img src={image} alt={title} className="search-cover-img"/>
+      <img 
+        src={image}
+        onError={({ currentTarget }) => {
+          currentTarget.onerror = null; // prevents looping
+          currentTarget.src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Placeholder_book.svg/1200px-Placeholder_book.svg.png";
+        }}
+      />
       </div>
       <div className="book-info">
         <p>{title}</p>

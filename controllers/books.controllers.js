@@ -41,7 +41,22 @@ const Book = require("../models/books.models")
             console.log(`ERROR: ${error.stack}`);
             res.status(400).json({msj:`ERROR: ${error.stack}`});
         }
+    }
+
+    const getTrendingBooks = async (req, res) => {
+        try {
+            let books = await Book.find({}, '-_id').sort({_id: 1}).limit(5)
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
         }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    }
 
     // Post
     const createBook = async (req, res) => {
@@ -108,6 +123,7 @@ const Book = require("../models/books.models")
 module.exports = {
     getBooks,
     getNewBooks,
+    getTrendingBooks,
     createBook,
     updateBook,
     deleteBook

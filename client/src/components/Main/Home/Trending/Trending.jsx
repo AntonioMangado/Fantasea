@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "../../../../api/axios";
 import CardsSlider from '../CardsSlider'
-const GET_BOOKS_URL = '/api/newreleases'
+const GET_TRENDINGBOOKS_URL = '/api/trending'
 
 
 const Trending = () => {
@@ -10,7 +10,7 @@ const Trending = () => {
   const [loading, setLoading] = useState(true)
 
   const retrieveCards = async () => {
-    const response = await axios.get(GET_BOOKS_URL)
+    const response = await axios.get(GET_TRENDINGBOOKS_URL)
     setBooks(response.data)
     setLoading(false)
   }
