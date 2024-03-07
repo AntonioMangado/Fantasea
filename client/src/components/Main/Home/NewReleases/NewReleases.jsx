@@ -20,7 +20,7 @@ const NewReleases = () => {
   }, [])
 
   return (
-    <section id="new-releases">
+    <section id="new-releases" className="slider-container">
       <div className="title-and-link">
         <h3>New releases</h3>
         <p><a href="#">See all</a></p>

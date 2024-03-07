@@ -1,16 +1,19 @@
-#new-releases {
+.slider-container {
     background-color: #efefef;
     height: auto;
+    
     
     .title-and-link {
         display: flex;
         justify-content: space-between;
         margin: 0 15px;
-        padding: 20px 0;
+        padding: 20px 0 5px;
 
         h3 {
             color: #353535;
             margin: 0;
+            font-size: 20px;
+            font-weight: 800;
         }
 
         p {

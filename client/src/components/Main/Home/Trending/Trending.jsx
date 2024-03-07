@@ -1,7 +1,33 @@
-import React from "react";
+import { useEffect, useState } from "react";
+import axios from "../../../../api/axios";
+import CardsSlider from '../CardsSlider'
+const GET_BOOKS_URL = '/api/newreleases'
+
 
 const Trending = () => {
-  return <div>Trending</div>;
+
+  const [books, setBooks] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  const retrieveCards = async () => {
+    const response = await axios.get(GET_BOOKS_URL)
+    setBooks(response.data)
+    setLoading(false)
+  }
+  
+  useEffect(() => {
+    retrieveCards()
+  }, [])
+
+  return (
+    <section id="trending" className="slider-container">
+      <div className="title-and-link">
+        <h3>Trending this month</h3>
+        <p><a href="#">See all</a></p>
+      </div>
+      <>{books && !loading ? <CardsSlider books={books}/> : <></>}</>
+    </section>
+  );
 };
 
 export default Trending;
