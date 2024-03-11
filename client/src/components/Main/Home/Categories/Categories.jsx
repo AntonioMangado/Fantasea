@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const categories = [
   { name: 'High Fantasy', background: 'https://adultfantasygenreguide.files.wordpress.com/2013/12/high-fantasy.jpg' },
@@ -16,9 +17,11 @@ const Categories = () => {
       <h3>Categories</h3>
       <div className='slider-container'>
         {categories.map((category, index) => (
-        <article className="category-card" key={index} style={{backgroundImage: `url(${category.background})`}}>
-          <span>{category.name}</span>
-        </article>
+        <Link to={`/category/${(category.name).split(" ").join("").toLowerCase()}`} key={index}>
+          <article className="category-card" key={index} style={{backgroundImage: `url(${category.background})`}}>
+            <span>{category.name}</span>
+          </article>
+        </Link>
         ))}
       </div>
       
