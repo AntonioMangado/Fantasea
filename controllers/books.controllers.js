@@ -58,6 +58,108 @@ const Book = require("../models/books.models")
         }
     }
 
+    const getFantasyBooks = async (req, res) => {
+        try {
+            let books = await Book.find({ genre: 'Fantasy' }, '-_id -__v -description -genre -year -id')
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
+        }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    };
+
+    const getYAFantasyBooks = async (req, res) => {
+        try {
+            let books = await Book.find({ genre: 'Young Adult Fantasy' }, '-_id -__v -description -genre -year -id')
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
+        }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    };
+
+    const getUrbanFantasyBooks = async (req, res) => {
+        try {
+            let books = await Book.find({ genre: { $in: ['Urban Fantasy', 'Steampunk Fantasy']} }, '-_id -__v -description -genre -year -id')
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
+        }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    };
+
+    const getHumorousFantasyBooks = async (req, res) => {
+        try {
+            let books = await Book.find({ genre: "Humorous Fantasy" }, '-_id -__v -description -genre -year -id')
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
+        }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    };
+    const getEpicFantasyBooks = async (req, res) => {
+        try {
+            let books = await Book.find({ genre: { $in: ['Epic Fantasy', 'High Fantasy']} }, '-_id -__v -description -genre -year -id')
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
+        }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    };
+    const getDarkFantasyBooks = async (req, res) => {
+        try {
+            let books = await Book.find({ genre: { $in: ['Dark Fantasy', 'Grimdark Fantasy']} }, '-_id -__v -description -genre -year -id')
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
+        }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    };
+    const getDystopianFantasyBooks = async (req, res) => {
+        try {
+            let books = await Book.find({ genre: { $in: ['Dystopian Fantasy', 'Post-Apocalyptic Fantasy']} }, '-_id -__v -description -genre -year -id')
+            if (books.length > 0) {
+                res.status(200).json(books);
+            } else {
+                res.status(400).json({msg: "No books found"})
+            }
+        }
+        catch (error) {
+            console.log(`ERROR: ${error.stack}`);
+            res.status(400).json({msj:`ERROR: ${error.stack}`});
+        }
+    };
+
     // Post
     const createBook = async (req, res) => {
         console.log(req.body);
@@ -124,6 +226,13 @@ module.exports = {
     getBooks,
     getNewBooks,
     getTrendingBooks,
+    getFantasyBooks,
+    getYAFantasyBooks,
+    getUrbanFantasyBooks,
+    getHumorousFantasyBooks,
+    getEpicFantasyBooks,
+    getDarkFantasyBooks,
+    getDystopianFantasyBooks,
     createBook,
     updateBook,
     deleteBook

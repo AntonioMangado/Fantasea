@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 import axios from '../../../../../api/axios';
+import Card from '../../../SearchComp/SearchList/Card';
 const GET_FANTASY_BOOKS_URL = '/api/category/fantasy';
 
 const Fantasy = () => {
@@ -13,13 +15,19 @@ const Fantasy = () => {
 
   return (
     <section className='individual-category-section'>
-      <h1>Fantasy books</h1>
-      {books.map((book, index) => (
-        <div key={index}>
-          <h3>{book.title}</h3>
-          <p>{book.author}</p>
-        </div>
-      ))}
+      <h2>Fantasy books</h2>
+      <div className="book-list">
+        {books.map((book) => (
+        <Card
+          key={uuidv4()}
+          id={book.id} 
+          title={book.title}
+          author={book.author}
+          year={book.year}
+          image={book.image}/>
+        ))}
+      </div>
+      
     </section>
   );
 };

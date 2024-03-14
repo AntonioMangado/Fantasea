@@ -5,7 +5,6 @@ import Card from "../../SearchComp/SearchList/Card";
 const CardsSlider = ({books}) => {
 
   const renderBooks = () => {
-    console.log(books)
     return books.map((book) => (
       <Card
         key={uuidv4()}
