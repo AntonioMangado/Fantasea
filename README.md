@@ -17,11 +17,13 @@ Since this is a fullstack app, a wide pletora of frameworks and libraries were u
 ## Main functionalities:
 1. JWT Authentication.
    The app lets you browse the book collection without the need to login. However, should you want to save books in your toread, reading, and read lists, authentication with JWT is supported (although it doesn't work as intended at the moment).
+   
    ### Old version
    ![authentication-image](./readme_assets/ssautentication.png)
 
    ### New version
-   ![authentication-image](./readme_assets/ssautentication.png)
+   ![authentication-image](./readme_assets/loginSS.png)
+   ![authentication-image](./readme_assets/loginSS2.png)
 
 3. Search and detailed view.
    Upon search, a list of cards will be generated each containing a book cover, title, author, and year. Upon click, the user will be redirected to their detailed view with a more extensive description, and options to save the books in different reading lists.
@@ -29,7 +31,8 @@ Since this is a fullstack app, a wide pletora of frameworks and libraries were u
    ![authentication-image](./readme_assets/ssautentication.png)
 
    ### New version
-   ![authentication-image](./readme_assets/ssautentication.png)
+   ![authentication-image](./readme_assets/homeSS.png)
+   ![authentication-image](./readme_assets/homeSS2.png)
 
 ## Next steps:
 - Adding a My Profile section, which allows an user view with access to their saved books.
