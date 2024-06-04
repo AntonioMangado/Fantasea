@@ -1,4 +1,7 @@
- # Welcome to Fantasea. :books:
+# DISCLAIMER - ONGOING REWORK
+I'm working on a rework of the app to make it more modern looking, with a whole redo of styles and some functionality. Work is a bit halted now due to lack of time, but not abandoned. The change can be seen in the pictures below. CHANGES ARE NOT DEPLOYED YET.
+ 
+# Welcome to Fantasea. :books:
 The aim of this app is to replicate a book management and tracker app like GoodReads with the sole emphasis being placed on fantasy books. As of now, the app is in it very first development stages and contains a VERY limited selection of books, but the goal is to work with a wide corpus of fantasy books, ranging from children fantasy to dark fantasy, and many more.
 
 :arrow_right: [Click here to take a look at it!](https://fantaseafront.onrender.com/) (Deployed version currently not working and abandoned, now working on a newer version):arrow_left:
@@ -14,8 +17,7 @@ Since this is a fullstack app, a wide pletora of frameworks and libraries were u
 - JWT
 - Sass
 
-# DISCLAIMER - ONGOING REWORK
-I'm working on a rework of the app to make it more modern looking, with a whole redo of styles and some functionality. Work is a bit halted now due to lack of time, but not abandoned. The change can be seen in the pictures below. CHANGES ARE NOT DEPLOYED YET.
+
 
 ## Main functionalities:
 1. JWT Authentication.
